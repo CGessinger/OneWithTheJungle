@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xdx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:leather"
+    },
+
+    "d":
+    {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:cow_chestplate",
+    "count": 1
+  }
+}
