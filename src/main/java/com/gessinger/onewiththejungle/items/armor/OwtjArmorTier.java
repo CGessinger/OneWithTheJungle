@@ -1,5 +1,6 @@
 package com.gessinger.onewiththejungle.items.armor;
 
+import com.gessinger.onewiththejungle.OneWithTheJungle;
 import com.gessinger.onewiththejungle.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -26,7 +27,7 @@ public enum OwtjArmorTier implements IArmorMaterial
 		this.durability = durability;
 		this.damageReduction = damageReduction;
 		this.enchantability = enchantability;
-		this.name = name;
+		this.name = OneWithTheJungle.MOD_ID + ":" + name;
 		this.thoughness = thoughness;
 		this. repairMaterial = repairMaterial;
 	}
@@ -34,13 +35,13 @@ public enum OwtjArmorTier implements IArmorMaterial
 	@Override
 	public int getDurability (EquipmentSlotType slotIn)
 	{
-		return durability;
+		return this.durability;
 	}
 
 	@Override
 	public int getDamageReductionAmount (EquipmentSlotType slotIn)
 	{
-		return damageReduction;
+		return this.damageReduction;
 	}
 
 	@Override
@@ -58,18 +59,18 @@ public enum OwtjArmorTier implements IArmorMaterial
 	@Override
 	public Ingredient getRepairMaterial ()
 	{
-		return repairMaterial.get();
+		return this.repairMaterial.get();
 	}
 
 	@Override
 	public String getName ()
 	{
-		return name;
+		return this.name;
 	}
 
 	@Override
 	public float getToughness ()
 	{
-		return thoughness;
+		return this.thoughness;
 	}
 }
