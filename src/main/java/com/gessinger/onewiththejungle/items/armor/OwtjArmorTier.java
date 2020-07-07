@@ -12,18 +12,18 @@ import java.util.function.Supplier;
 
 public enum OwtjArmorTier implements IArmorMaterial
 {
-	COW_MATERIAL("cow_material", 55, 1, 15, 0, () -> {
+	COW_MATERIAL("cow_material", 55, new int[] {1, 2, 3, 4}, 15, 1, () -> {
 		return Ingredient.fromItems(RegistryHandler.COW_CHESTPLATE.get());
 	});
 
 	private final int durability;
-	private final int damageReduction;
+	private final int[] damageReduction;
 	private final int enchantability;
 	private final String name;
 	private final float thoughness;
 	private final Supplier<Ingredient> repairMaterial;
 
-	OwtjArmorTier(String name, int durability, int damageReduction, int enchantability, float thoughness, Supplier<Ingredient> repairMaterial) {
+	OwtjArmorTier(String name, int durability, int[] damageReduction, int enchantability, float thoughness, Supplier<Ingredient> repairMaterial) {
 		this.durability = durability;
 		this.damageReduction = damageReduction;
 		this.enchantability = enchantability;
@@ -41,7 +41,7 @@ public enum OwtjArmorTier implements IArmorMaterial
 	@Override
 	public int getDamageReductionAmount (EquipmentSlotType slotIn)
 	{
-		return this.damageReduction;
+		return this.damageReduction[slotIn.getIndex()];
 	}
 
 	@Override
