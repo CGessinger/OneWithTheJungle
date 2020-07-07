@@ -47,7 +47,7 @@ public class OneWithTheJungle
         @Override
         public ItemStack createIcon ()
         {
-            return new ItemStack(Items.COW_SPAWN_EGG);
+            return new ItemStack(RegistryHandler.COW_CHESTPLATE.get());
         }
     };
 }
