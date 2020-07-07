@@ -28,7 +28,7 @@ public class RegistryHandler
 	public static final RegistryObject<ArmorItem> COW_CHESTPLATE = ITEMS.register("cow_chestplate", () ->
 			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, new Item.Properties().group(OneWithTheJungle.TAB)));
 
-	public static final RegistryObject<ArmorItem> COW_LEGGINGS = ITEMS.register("cow_leggins", () ->
+	public static final RegistryObject<ArmorItem> COW_LEGGINGS = ITEMS.register("cow_leggings", () ->
 			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.LEGS, new Item.Properties().group(OneWithTheJungle.TAB)));
 
 	public static final RegistryObject<ArmorItem> COW_BOOTS = ITEMS.register("cow_boots", () ->
