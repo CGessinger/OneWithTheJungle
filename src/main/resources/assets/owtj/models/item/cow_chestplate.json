@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "owtj:item/cow_chestplate"
+    "layer0": "owtj:items/cow_chestplate"
   }
 }
