@@ -23,5 +23,5 @@ public class RegistryHandler
 
 	// Armor Item
 	public static final RegistryObject<ArmorItem> COW_CHESTPLATE = ITEMS.register("cow_chestplate", () ->
-			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, new Item.Properties().group(OneWithTheJungle.TAB)));
 }
