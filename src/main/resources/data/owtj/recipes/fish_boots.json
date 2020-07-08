@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "d d",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x": [
+    {
+      "item": "minecraft:salmon"
+    },
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "item": "minecraft:cod"
+    },
+    {
+      "item": "minecraft:pufferfish"
+    } ],
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:fish_boots",
+    "count": 1
+  }
+}
