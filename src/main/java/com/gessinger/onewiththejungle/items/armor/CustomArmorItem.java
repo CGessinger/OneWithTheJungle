@@ -25,7 +25,7 @@ public class CustomArmorItem extends ArmorItem
 		if (!hasFullArmor(ArmorType, player))
 			return;
 
-		player.addPotionEffect(PotionEffects.Resistance.get());
+		player.addPotionEffect(effect.get());
 	}
 
 	private boolean hasFullArmor (String ArmorType, final PlayerEntity player)

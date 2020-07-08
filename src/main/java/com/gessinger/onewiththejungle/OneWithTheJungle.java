@@ -20,6 +20,7 @@ public class OneWithTheJungle
     public static final String MOD_ID = "owtj";
 
     public OneWithTheJungle() {
+    	System.out.println("OneWithTheJungle loading...");
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the doClientStuff method for modloading

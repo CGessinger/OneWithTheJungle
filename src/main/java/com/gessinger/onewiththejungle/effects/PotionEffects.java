@@ -5,7 +5,8 @@ import net.minecraft.potion.Effects;
 
 public enum PotionEffects
 {
-	Resistance(new EffectInstance(Effects.RESISTANCE, 0, 0, false, false));
+	Resistance(new EffectInstance(Effects.RESISTANCE, 0, 0, false, false)),
+	Water_Breathing(new EffectInstance(Effects.WATER_BREATHING, 0, 0, false, false));
 
 	private final EffectInstance effect;
 

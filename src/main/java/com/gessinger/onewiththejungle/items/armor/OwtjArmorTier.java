@@ -12,8 +12,12 @@ import java.util.function.Supplier;
 
 public enum OwtjArmorTier implements IArmorMaterial
 {
-	COW_MATERIAL("cow_material", 55, new int[] {1, 2, 3, 4}, 15, 1, () -> {
+	COW_MATERIAL("cow_material", 70, new int[] {1, 3, 4, 2}, 15, 1, () -> {
 		return Ingredient.fromItems(RegistryHandler.COW_CHESTPLATE.get());
+	}),
+
+	FISH_MATERIAL("fish_material", 40, new int[] {1, 2, 3, 1}, 20, 1, () -> {
+		return Ingredient.fromItems(RegistryHandler.FISH_CHESTPLATE.get());
 	});
 
 	private final int durability;
