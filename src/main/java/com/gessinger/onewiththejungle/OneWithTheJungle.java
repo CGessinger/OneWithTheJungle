@@ -1,9 +1,10 @@
 package com.gessinger.onewiththejungle;
 
-import com.gessinger.onewiththejungle.util.RegistryHandler;
+import com.gessinger.onewiththejungle.util.OwtjItemRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -20,13 +21,13 @@ public class OneWithTheJungle
     public static final String MOD_ID = "owtj";
 
     public OneWithTheJungle() {
-    	System.out.println("OneWithTheJungle loading...");
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        modEventBus.addListener(this::setup);
         // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
-        RegistryHandler.init();
+        modEventBus.addListener(this::doClientStuff);
+        // Register Armor Items
+        OwtjItemRegistry.ITEMS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -45,7 +46,7 @@ public class OneWithTheJungle
         @Override
         public ItemStack createIcon ()
         {
-            return new ItemStack(RegistryHandler.COW_CHESTPLATE.get());
+            return new ItemStack(OwtjItemRegistry.COW_CHESTPLATE.get());
         }
     };
 }

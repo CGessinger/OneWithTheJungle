@@ -1,11 +1,10 @@
 package com.gessinger.onewiththejungle.items.armor;
 
 import com.gessinger.onewiththejungle.OneWithTheJungle;
-import com.gessinger.onewiththejungle.util.RegistryHandler;
+import com.gessinger.onewiththejungle.util.OwtjItemRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 
 import java.util.function.Supplier;
@@ -13,15 +12,15 @@ import java.util.function.Supplier;
 public enum OwtjArmorTier implements IArmorMaterial
 {
 	COW_MATERIAL("cow_material", 70, new int[] {1, 3, 4, 2}, 15, 1, () -> {
-		return Ingredient.fromItems(RegistryHandler.COW_CHESTPLATE.get());
+		return Ingredient.fromItems(OwtjItemRegistry.COW_CHESTPLATE.get());
 	}),
 
 	SHEEP_MATERIAL("sheep_material", 70, new int[] {1, 3, 4, 2}, 15, 1, () -> {
-		return Ingredient.fromItems(RegistryHandler.SHEEP_CHESTPLATE.get());
+		return Ingredient.fromItems(OwtjItemRegistry.SHEEP_CHESTPLATE.get());
 	}),
 
 	FISH_MATERIAL("fish_material", 40, new int[] {1, 2, 3, 1}, 20, 1, () -> {
-		return Ingredient.fromItems(RegistryHandler.FISH_CHESTPLATE.get());
+		return Ingredient.fromItems(OwtjItemRegistry.FISH_CHESTPLATE.get());
 	});
 
 	private final int durability;
