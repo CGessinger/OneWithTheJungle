@@ -2,6 +2,7 @@ package com.gessinger.onewiththejungle.common.util;
 
 import com.gessinger.onewiththejungle.common.OneWithTheJungle;
 import com.gessinger.onewiththejungle.common.effects.PotionEffects;
+import com.gessinger.onewiththejungle.common.items.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.CustomArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.OwtjArmorTier;
 import net.minecraft.inventory.EquipmentSlotType;

@@ -1,27 +1,32 @@
 package com.gessinger.onewiththejungle.common;
 
+import com.gessinger.onewiththejungle.client.Proxy.ClientProxy;
+import com.gessinger.onewiththejungle.common.server.ServerProxy;
 import com.gessinger.onewiththejungle.common.util.OwtjItemRegistry;
+import com.gessinger.onewiththejungle.proxy.IProxy;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("owtj")
 public class OneWithTheJungle
 {
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "owtj";
 
+    public static final IProxy PROXY = DistExecutor.runForDist(() -> ClientProxy::new, () -> ServerProxy::new);
+
     public OneWithTheJungle() {
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
+                forgeEventBus = MinecraftForge.EVENT_BUS;
+
+        PROXY.setup(modEventBus, forgeEventBus);
+
         // Register the setup method for modloading
         modEventBus.addListener(this::setup);
         // Register the doClientStuff method for modloading
