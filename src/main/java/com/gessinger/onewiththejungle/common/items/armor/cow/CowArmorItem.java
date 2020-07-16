@@ -1,5 +1,7 @@
 package com.gessinger.onewiththejungle.common.items.armor.cow;
 
+import com.gessinger.onewiththejungle.client.Proxy.ClientProxy;
+import com.gessinger.onewiththejungle.common.OneWithTheJungle;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -16,7 +18,6 @@ public class CowArmorItem extends ArmorItem
 
 	@Override
 	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return null;
-		//return OneWithTheJungle.PROXY instanceof ClientProxy ? ((ClientProxy) OneWithTheJungle.PROXY).get...ArmorModel(armorSlot) : null;
+		return OneWithTheJungle.PROXY instanceof ClientProxy ? ((ClientProxy) OneWithTheJungle.PROXY).getCowArmorModel(armorSlot) : null;
 	}
 }
