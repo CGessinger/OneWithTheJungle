@@ -1,10 +1,13 @@
 package com.gessinger.onewiththejungle.common.util;
 
 import com.gessinger.onewiththejungle.common.OneWithTheJungle;
-import com.gessinger.onewiththejungle.common.effects.PotionEffects;
-import com.gessinger.onewiththejungle.common.items.CowArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.CustomArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.OwtjArmorTier;
+import com.gessinger.onewiththejungle.common.items.armor.*;
+import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorTick;
+import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorTick;
+import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorTick;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -20,40 +23,40 @@ public class OwtjItemRegistry
 	// Armor Item
 	/* Cow Armor */
 	public static final RegistryObject<ArmorItem> COW_HELMET = ITEMS.register("cow_helmet", () ->
-			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+			new CowArmorTick(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> COW_CHESTPLATE = ITEMS.register("cow_chestplate", () ->
-			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> COW_LEGGINGS = ITEMS.register("cow_leggings", () ->
-			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> COW_BOOTS = ITEMS.register("cow_boots", () ->
-			new ArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 
 	/* Fish Armor */
 	public static final RegistryObject<ArmorItem> FISH_HELMET = ITEMS.register("fish_helmet", () ->
-			new CustomArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB, "fish", PotionEffects.Water_Breathing));
+			new FishArmorTick(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> FISH_CHESTPLATE = ITEMS.register("fish_chestplate", () ->
-			new ArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+			new FishArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> FISH_LEGGINGS = ITEMS.register("fish_leggings", () ->
-			new ArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+			new FishArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> FISH_BOOTS = ITEMS.register("fish_boots", () ->
-			new ArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+			new FishArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 
 	/* Sheep Armor */
 	public static final RegistryObject<ArmorItem> SHEEP_HELMET = ITEMS.register("sheep_helmet", () ->
-			new CustomArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB, "sheep", PotionEffects.Regeneration));
+			new SheepArmorTick(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> SHEEP_CHESTPLATE = ITEMS.register("sheep_chestplate", () ->
-			new ArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> SHEEP_LEGGINGS = ITEMS.register("sheep_leggings", () ->
-			new ArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> SHEEP_BOOTS = ITEMS.register("sheep_boots", () ->
-			new ArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }
