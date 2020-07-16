@@ -1,7 +1,7 @@
-package com.gessinger.onewiththejungle.items.armor;
+package com.gessinger.onewiththejungle.common.items.armor;
 
-import com.gessinger.onewiththejungle.OneWithTheJungle;
-import com.gessinger.onewiththejungle.util.OwtjItemRegistry;
+import com.gessinger.onewiththejungle.common.OneWithTheJungle;
+import com.gessinger.onewiththejungle.common.util.OwtjItemRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

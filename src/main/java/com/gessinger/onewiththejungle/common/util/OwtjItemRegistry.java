@@ -1,14 +1,13 @@
-package com.gessinger.onewiththejungle.util;
+package com.gessinger.onewiththejungle.common.util;
 
-import com.gessinger.onewiththejungle.OneWithTheJungle;
-import com.gessinger.onewiththejungle.effects.PotionEffects;
-import com.gessinger.onewiththejungle.items.armor.CustomArmorItem;
-import com.gessinger.onewiththejungle.items.armor.OwtjArmorTier;
+import com.gessinger.onewiththejungle.common.OneWithTheJungle;
+import com.gessinger.onewiththejungle.common.effects.PotionEffects;
+import com.gessinger.onewiththejungle.common.items.armor.CustomArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.OwtjArmorTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 

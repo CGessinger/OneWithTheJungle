@@ -1,6 +1,6 @@
-package com.gessinger.onewiththejungle;
+package com.gessinger.onewiththejungle.common;
 
-import com.gessinger.onewiththejungle.util.OwtjItemRegistry;
+import com.gessinger.onewiththejungle.common.util.OwtjItemRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;

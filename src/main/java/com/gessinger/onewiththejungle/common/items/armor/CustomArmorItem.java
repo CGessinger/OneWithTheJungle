@@ -1,6 +1,6 @@
-package com.gessinger.onewiththejungle.items.armor;
+package com.gessinger.onewiththejungle.common.items.armor;
 
-import com.gessinger.onewiththejungle.effects.PotionEffects;
+import com.gessinger.onewiththejungle.common.effects.PotionEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;

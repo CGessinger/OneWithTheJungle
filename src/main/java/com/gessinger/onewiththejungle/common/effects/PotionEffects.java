@@ -1,4 +1,4 @@
-package com.gessinger.onewiththejungle.effects;
+package com.gessinger.onewiththejungle.common.effects;
 
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
