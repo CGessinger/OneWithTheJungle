@@ -6,9 +6,9 @@ This mod is definitly not made to provide a realistic minecraft, however it is i
 * __cow armor__ effect: resistance
 * __fish armor__ effect: underwater breathing
 * __sheep armor__ effect: regeneration
+* __pig armor__ effect: saturation (without model texture)
 
 ### Planned armor
-* __pig armor__ effect: saturation
 * __rabbit armor__ effect: jumpboost
 * __chicken armor__ effect: slow fall
 * __squid armor__ effect: conduit power
