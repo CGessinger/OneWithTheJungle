@@ -6,6 +6,8 @@ import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorTick;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorTick;
+import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorTick;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorTick;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -59,4 +61,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> SHEEP_BOOTS = ITEMS.register("sheep_boots", () ->
 			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Pig Armor */
+	public static final RegistryObject<ArmorItem> PIG_HELMET = ITEMS.register("pig_helmet", () ->
+			new PigArmorTick(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PIG_CHESTPLATE = ITEMS.register("pig_chestplate", () ->
+			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PIG_LEGGINGS = ITEMS.register("pig_leggings", () ->
+			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PIG_BOOTS = ITEMS.register("pig_boots", () ->
+			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }

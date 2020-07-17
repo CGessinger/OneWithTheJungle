@@ -21,6 +21,10 @@ public enum OwtjArmorTier implements IArmorMaterial
 
 	FISH_MATERIAL("fish_material", 40, new int[] {1, 2, 3, 1}, 20, 1, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.FISH_CHESTPLATE.get());
+	}),
+
+	PIG_MATERIAL("pig_material", 60, new int[] {1, 2, 3, 1}, 10, 1, () -> {
+		return Ingredient.fromItems(OwtjItemRegistry.PIG_CHESTPLATE.get());
 	});
 
 	private final int durability;

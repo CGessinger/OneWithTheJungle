@@ -7,9 +7,9 @@ public enum PotionEffects
 {
 	Resistance(new EffectInstance(Effects.RESISTANCE, 0, 0, false, false)),
 	Regeneration(new EffectInstance(Effects.REGENERATION, 0, 0, false, false)),
+	Saturation(new EffectInstance(Effects.SATURATION, 0, 0, false, false)),
 	Water_Breathing(new EffectInstance(Effects.WATER_BREATHING, 0, 0, false, false));
-
-
+	
 	private final EffectInstance effect;
 
 	PotionEffects (EffectInstance eff){
