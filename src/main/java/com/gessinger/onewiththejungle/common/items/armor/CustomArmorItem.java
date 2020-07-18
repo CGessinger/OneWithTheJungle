@@ -20,12 +20,14 @@ public abstract class CustomArmorItem extends ArmorItem
 	private EffectInstance armorEffect;
 	private final Effect armorEffectType;
 	private final boolean isTickSlot;
+	private final Class<?> itemClass;
 	public CustomArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder)
 	{
 		super(materialIn, slot, builder);
 		this.armorEffect = getEffectInstance();
 		this.armorEffectType = armorEffect.getPotion();
 		this.isTickSlot = slot == EquipmentSlotType.FEET;
+		this.itemClass = getItemClass();
 	}
 
 	@Override
@@ -41,8 +43,8 @@ public abstract class CustomArmorItem extends ArmorItem
 	@Override
 	public void onArmorTick (final ItemStack stack, final World world, final PlayerEntity player)
 	{
-		world.getProfiler().startSection(getItemClass().toString());
-		if (!isTickSlot || !hasFullArmor(getItemClass(), player))
+		world.getProfiler().startSection(itemClass.toString());
+		if (!isTickSlot || !hasFullArmor(itemClass, player))
 		{
 			world.getProfiler().endSection();
 			return;
@@ -63,16 +65,16 @@ public abstract class CustomArmorItem extends ArmorItem
 			player.addPotionEffect(this.armorEffect);
 		else if (playerEff.getAmplifier() > 1 && playerEff.getDuration() <= 1)
 		{
-			System.out.println("Create new effect instance");
 			this.armorEffect = getEffectInstance();
 			player.addPotionEffect(this.armorEffect);
 		}
 	}
 
-	private static boolean hasFullArmor (final Class<?> ArmorType, final PlayerEntity player)
+	private static boolean hasFullArmor (final Class<?> armorType, final PlayerEntity player)
 	{
-		for(ItemStack armor : player.getArmorInventoryList()){
-			if (armor.getItem().getClass() != ArmorType){
+		Iterable<ItemStack> armorList = player.getArmorInventoryList();
+		for(ItemStack stack : armorList){
+			if (stack.getItem().getClass() != armorType){
 				return false;
 			}
 		}
