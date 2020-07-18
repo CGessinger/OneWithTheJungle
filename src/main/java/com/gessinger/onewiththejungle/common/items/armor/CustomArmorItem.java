@@ -18,8 +18,8 @@ import net.minecraft.world.World;
 public abstract class CustomArmorItem extends ArmorItem
 {
 	private EffectInstance armorEffect;
-	private Effect armorEffectType;
-	private boolean isTickSlot;
+	private final Effect armorEffectType;
+	private final boolean isTickSlot;
 	public CustomArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder)
 	{
 		super(materialIn, slot, builder);
@@ -54,7 +54,7 @@ public abstract class CustomArmorItem extends ArmorItem
 
 	abstract public EffectInstance getEffectInstance();
 
-	abstract public Class getItemClass();
+	abstract public Class<?> getItemClass();
 
 	private void giveEffect(final PlayerEntity player)
 	{
@@ -69,7 +69,7 @@ public abstract class CustomArmorItem extends ArmorItem
 		}
 	}
 
-	private static boolean hasFullArmor (final Class ArmorType, final PlayerEntity player)
+	private static boolean hasFullArmor (final Class<?> ArmorType, final PlayerEntity player)
 	{
 		for(ItemStack armor : player.getArmorInventoryList()){
 			if (armor.getItem().getClass() != ArmorType){

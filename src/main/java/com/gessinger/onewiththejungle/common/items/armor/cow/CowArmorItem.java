@@ -37,7 +37,7 @@ public class CowArmorItem extends CustomArmorItem
 	}
 
 	@Override
-	public Class getItemClass()
+	public Class<?> getItemClass()
 	{
 		return this.getClass();
 	}
