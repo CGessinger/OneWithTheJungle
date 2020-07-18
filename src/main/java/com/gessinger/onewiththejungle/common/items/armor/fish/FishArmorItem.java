@@ -1,13 +1,15 @@
 package com.gessinger.onewiththejungle.common.items.armor.fish;
 
+import com.gessinger.onewiththejungle.common.items.armor.CustomArmorItem;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 
-public class FishArmorItem extends ArmorItem
+public class FishArmorItem extends CustomArmorItem
 {
 	public FishArmorItem (IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder)
 	{
@@ -15,8 +17,20 @@ public class FishArmorItem extends ArmorItem
 	}
 
 	@Override
-	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
+	public <A extends BipedModel<?>> A getCustomModel(EquipmentSlotType armorSlot)
+	{
 		return null;
-		//return OneWithTheJungle.PROXY instanceof ClientProxy ? ((ClientProxy) OneWithTheJungle.PROXY).get...ArmorModel(armorSlot) : null;
+	}
+
+	@Override
+	public Class getItemClass()
+	{
+		return this.getClass();
+	}
+
+	@Override
+	public EffectInstance getEffectInstance()
+	{
+		return new EffectInstance(Effects.WATER_BREATHING, 0, 0, false, false);
 	}
 }

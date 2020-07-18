@@ -18,9 +18,4 @@ public class ClientProxy implements IProxy
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {}
-
-	@SuppressWarnings("unchecked")
-	public <A extends BipedModel<?>> A getCowArmorModel(EquipmentSlotType armorSlot) {
-		return (A) (armorSlot == EquipmentSlotType.LEGS ? CowArmorLeggings : CowArmorModel);
-	}
 }

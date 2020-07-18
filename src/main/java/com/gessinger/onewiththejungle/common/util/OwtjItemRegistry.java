@@ -3,13 +3,9 @@ package com.gessinger.onewiththejungle.common.util;
 import com.gessinger.onewiththejungle.common.OneWithTheJungle;
 import com.gessinger.onewiththejungle.common.items.armor.*;
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorTick;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorTick;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorTick;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
-import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorTick;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -25,7 +21,7 @@ public class OwtjItemRegistry
 	// Armor Item
 	/* Cow Armor */
 	public static final RegistryObject<ArmorItem> COW_HELMET = ITEMS.register("cow_helmet", () ->
-			new CowArmorTick(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> COW_CHESTPLATE = ITEMS.register("cow_chestplate", () ->
 			new CowArmorItem(OwtjArmorTier.COW_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
@@ -38,7 +34,7 @@ public class OwtjItemRegistry
 
 	/* Fish Armor */
 	public static final RegistryObject<ArmorItem> FISH_HELMET = ITEMS.register("fish_helmet", () ->
-			new FishArmorTick(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+			new FishArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> FISH_CHESTPLATE = ITEMS.register("fish_chestplate", () ->
 			new FishArmorItem(OwtjArmorTier.FISH_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
@@ -51,7 +47,7 @@ public class OwtjItemRegistry
 
 	/* Sheep Armor */
 	public static final RegistryObject<ArmorItem> SHEEP_HELMET = ITEMS.register("sheep_helmet", () ->
-			new SheepArmorTick(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> SHEEP_CHESTPLATE = ITEMS.register("sheep_chestplate", () ->
 			new SheepArmorItem(OwtjArmorTier.SHEEP_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
@@ -64,7 +60,7 @@ public class OwtjItemRegistry
 
 	/* Pig Armor */
 	public static final RegistryObject<ArmorItem> PIG_HELMET = ITEMS.register("pig_helmet", () ->
-			new PigArmorTick(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
 	public static final RegistryObject<ArmorItem> PIG_CHESTPLATE = ITEMS.register("pig_chestplate", () ->
 			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
