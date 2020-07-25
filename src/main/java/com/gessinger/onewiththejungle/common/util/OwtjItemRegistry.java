@@ -2,6 +2,7 @@ package com.gessinger.onewiththejungle.common.util;
 
 import com.gessinger.onewiththejungle.common.OneWithTheJungle;
 import com.gessinger.onewiththejungle.common.items.armor.*;
+import com.gessinger.onewiththejungle.common.items.armor.chicken.ChickenArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
@@ -70,4 +71,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> PIG_BOOTS = ITEMS.register("pig_boots", () ->
 			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Chicken Armor */
+	public static final RegistryObject<ArmorItem> CHICKEN_HELMET = ITEMS.register("chicken_helmet", () ->
+			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> CHICKEN_CHESTPLATE = ITEMS.register("chicken_chestplate", () ->
+			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> CHICKEN_LEGGINGS = ITEMS.register("chicken_leggings", () ->
+			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> CHICKEN_BOOTS = ITEMS.register("chicken_boots", () ->
+			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }
