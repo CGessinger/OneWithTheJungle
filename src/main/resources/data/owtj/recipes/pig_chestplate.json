@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "d d",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:porkchop"
+    },
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:pig_chestplate",
+    "count": 1
+  }
+}

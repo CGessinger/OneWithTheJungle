@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "dxd",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:porkchop"
+    },
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:pig_helmet",
+    "count": 1
+  }
+}

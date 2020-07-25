@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "dxd",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:feather"
+    },
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:chicken_leggings",
+    "count": 1
+  }
+}
