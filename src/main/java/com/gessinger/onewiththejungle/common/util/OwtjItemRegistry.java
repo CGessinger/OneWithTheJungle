@@ -7,6 +7,7 @@ import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.squid.SquidArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -84,4 +85,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> CHICKEN_BOOTS = ITEMS.register("chicken_boots", () ->
 			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Chicken Armor */
+	public static final RegistryObject<ArmorItem> SQUID_HELMET = ITEMS.register("squid_helmet", () ->
+			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> SQUID_CHESTPLATE = ITEMS.register("squid_chestplate", () ->
+			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> SQUID_LEGGINGS = ITEMS.register("squid_leggings", () ->
+			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> SQUID_BOOTS = ITEMS.register("squid_boots", () ->
+			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }

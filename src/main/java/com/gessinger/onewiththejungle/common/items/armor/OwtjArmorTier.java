@@ -15,7 +15,7 @@ public enum OwtjArmorTier implements IArmorMaterial
 		return Ingredient.fromItems(OwtjItemRegistry.COW_CHESTPLATE.get());
 	}),
 
-	SHEEP_MATERIAL("sheep_material", 70, new int[] {1, 3, 4, 2}, 15, 1, () -> {
+	SHEEP_MATERIAL("sheep_material", 70, new int[] {1, 3, 4, 2}, 15, 0, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.SHEEP_CHESTPLATE.get());
 	}),
 
@@ -29,6 +29,10 @@ public enum OwtjArmorTier implements IArmorMaterial
 
 	PIG_MATERIAL("pig_material", 60, new int[] {1, 2, 3, 1}, 10, 1, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.PIG_CHESTPLATE.get());
+	}),
+
+	SQUID_MATERIAL("squid_material", 60, new int[] {1, 2, 3, 1}, 22, 0, () -> {
+	return Ingredient.fromItems(OwtjItemRegistry.SQUID_CHESTPLATE.get());
 	});
 
 	private final int durability;
