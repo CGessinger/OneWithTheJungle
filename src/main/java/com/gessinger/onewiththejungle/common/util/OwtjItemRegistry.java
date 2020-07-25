@@ -6,6 +6,7 @@ import com.gessinger.onewiththejungle.common.items.armor.chicken.ChickenArmorIte
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.rabbit.RabbitArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.squid.SquidArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -86,7 +87,7 @@ public class OwtjItemRegistry
 	public static final RegistryObject<ArmorItem> CHICKEN_BOOTS = ITEMS.register("chicken_boots", () ->
 			new ChickenArmorItem(OwtjArmorTier.CHICKEN_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 
-	/* Chicken Armor */
+	/* Squid Armor */
 	public static final RegistryObject<ArmorItem> SQUID_HELMET = ITEMS.register("squid_helmet", () ->
 			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
 
@@ -98,4 +99,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> SQUID_BOOTS = ITEMS.register("squid_boots", () ->
 			new SquidArmorItem(OwtjArmorTier.SQUID_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Rabbit Armor */
+	public static final RegistryObject<ArmorItem> RABBIT_HELMET = ITEMS.register("rabbit_helmet", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_CHESTPLATE = ITEMS.register("rabbit_chestplate", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_LEGGINGS = ITEMS.register("rabbit_leggings", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_BOOTS = ITEMS.register("rabbit_boots", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }

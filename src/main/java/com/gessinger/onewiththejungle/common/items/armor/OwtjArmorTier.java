@@ -19,11 +19,11 @@ public enum OwtjArmorTier implements IArmorMaterial
 		return Ingredient.fromItems(OwtjItemRegistry.SHEEP_CHESTPLATE.get());
 	}),
 
-	FISH_MATERIAL("fish_material", 40, new int[] {1, 2, 3, 1}, 20, 1, () -> {
+	FISH_MATERIAL("fish_material", 80, new int[] {1, 2, 3, 1}, 20, 1, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.FISH_CHESTPLATE.get());
 	}),
 
-	CHICKEN_MATERIAL("fish_material", 40, new int[] {1, 2, 3, 1}, 30, 0, () -> {
+	CHICKEN_MATERIAL("fish_material", 50, new int[] {1, 2, 3, 1}, 30, 0, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.CHICKEN_CHESTPLATE.get());
 	}),
 
@@ -31,8 +31,12 @@ public enum OwtjArmorTier implements IArmorMaterial
 		return Ingredient.fromItems(OwtjItemRegistry.PIG_CHESTPLATE.get());
 	}),
 
-	SQUID_MATERIAL("squid_material", 60, new int[] {1, 2, 3, 1}, 22, 0, () -> {
+	SQUID_MATERIAL("squid_material", 50, new int[] {1, 2, 3, 1}, 22, 0, () -> {
 	return Ingredient.fromItems(OwtjItemRegistry.SQUID_CHESTPLATE.get());
+	}),
+
+	RABBIT_MATERIAL("rabbit_material", 80, new int[] {1, 2, 3, 1}, 10, 1, () -> {
+		return Ingredient.fromItems(OwtjItemRegistry.RABBIT_CHESTPLATE.get());
 	});
 
 	private final int durability;
