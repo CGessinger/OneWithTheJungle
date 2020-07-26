@@ -10,7 +10,7 @@
   {
     "x":
     {
-      "item": "minecraft:feather"
+      "item": "minecraft:ink_sac"
     },
 
     "d":
@@ -20,7 +20,7 @@
   },
   "result":
   {
-    "item": "owtj:chicken_helmet",
+    "item": "owtj:squid_helmet",
     "count": 1
   }
 }
