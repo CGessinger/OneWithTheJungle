@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "d d",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x": [
+      {
+        "item": "minecraft:rabbit_foot"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:rabbit"
+      }
+    ],
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:rabbit_boots",
+    "count": 1
+  }
+}

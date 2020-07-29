@@ -5,6 +5,7 @@ import com.gessinger.onewiththejungle.common.items.armor.*;
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.rabbit.RabbitArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -70,4 +71,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> PIG_BOOTS = ITEMS.register("pig_boots", () ->
 			new PigArmorItem(OwtjArmorTier.PIG_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Rabbit Armor */
+	public static final RegistryObject<ArmorItem> RABBIT_HELMET = ITEMS.register("rabbit_helmet", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_CHESTPLATE = ITEMS.register("rabbit_chestplate", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_LEGGINGS = ITEMS.register("rabbit_leggings", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> RABBIT_BOOTS = ITEMS.register("rabbit_boots", () ->
+			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }

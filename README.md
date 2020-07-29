@@ -7,9 +7,9 @@ This mod is definitly not made to provide a realistic minecraft, however it is i
 * __fish armor__ effect: underwater breathing
 * __sheep armor__ effect: regeneration
 * __pig armor__ effect: saturation (without model texture)
+* __rabbit armor__ effect: jumpboost
 
 ### Planned armor
-* __rabbit armor__ effect: jumpboost
 * __chicken armor__ effect: slow fall
 * __squid armor__ effect: conduit power
 * __parrot armor__ effect: flying + mining fatigue
