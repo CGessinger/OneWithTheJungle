@@ -26,7 +26,7 @@ public class SheepArmorItem extends CustomArmorItem
 	@Override
 	public EffectInstance getEffectInstance()
 	{
-		return new EffectInstance(Effects.REGENERATION, 0, 0, false, false);
+		return new EffectInstance(Effects.REGENERATION, 0, 0, false, false, false);
 	}
 
 	@Override

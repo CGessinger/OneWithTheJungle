@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "d d",
+    "x x",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:feather"
+    },
+
+    "d":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "owtj:chicken_boots",
+    "count": 1
+  }
+}
