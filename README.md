@@ -3,11 +3,19 @@ One With The Jungle is a simple Minecraft mod adding mob armor which give differ
 This mod is definitly not made to provide a realistic minecraft, however it is interesting for making the early game more fun.
 
 ### Included armor
-* __cow armor__, effect: resistance
+* __cow armor__, effect: resistance 
+
+![Cow Armor](images/CowArmor.png)
 * __fish armor__, effect: underwater breathing (temporary model texture)
 * __sheep armor__, effect: regeneration
+
+![Sheep Armor](images/SheepArmor.png)
 * __pig armor__, effect: saturation
+
+![Pig Armor](images/PigArmor.png)
 * __rabbit armor__, effect: jumpboost
+
+![Rabbit Armor](images/RabbitArmor.png)
 * __chicken armor__, effect: slow fall (no texture)
 * __squid armor__, effect: conduit power (no model texture)
 
