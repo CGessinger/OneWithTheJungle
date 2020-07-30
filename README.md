@@ -7,6 +7,8 @@ This mod is definitly not made to provide a realistic minecraft, however it is i
 
 ![Cow Armor](images/CowArmor.png)
 * __fish armor__, effect: underwater breathing (temporary model texture)
+
+![Fish Armor](images/FishArmor.png)
 * __sheep armor__, effect: regeneration
 
 ![Sheep Armor](images/SheepArmor.png)
@@ -17,7 +19,11 @@ This mod is definitly not made to provide a realistic minecraft, however it is i
 
 ![Rabbit Armor](images/RabbitArmor.png)
 * __chicken armor__, effect: slow fall (no texture)
-* __squid armor__, effect: conduit power (no model texture)
+
+![Chicken Armor](images/ChickenArmor.png)
+* __squid armor__, effect: conduit power
+
+![Squid Armor](images/SquidArmor.png)
 
 ### Planned armor
 * __parrot armor__, effect: flying + mining fatigue
