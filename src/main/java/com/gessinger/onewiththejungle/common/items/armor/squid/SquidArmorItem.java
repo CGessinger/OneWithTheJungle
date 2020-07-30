@@ -1,5 +1,6 @@
 package com.gessinger.onewiththejungle.common.items.armor.squid;
 
+import com.gessinger.onewiththejungle.client.renderer.entity.model.SquidArmorModel;
 import com.gessinger.onewiththejungle.common.items.armor.CustomArmorItem;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -9,15 +10,23 @@ import net.minecraft.potion.Effects;
 
 public class SquidArmorItem extends CustomArmorItem
 {
+	SquidArmorModel SquidArmorLeggings;
+	SquidArmorModel SquidArmorModel;
+
 	public SquidArmorItem (IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder)
 	{
 		super(materialIn, slot, builder);
+		SquidArmorLeggings = new SquidArmorModel(0.5F);
+		SquidArmorModel = new SquidArmorModel(1.0F);
 	}
 
 	@Override
 	public <A extends BipedModel<?>> A getCustomModel(EquipmentSlotType armorSlot)
 	{
-		return null;
+		if (armorSlot == EquipmentSlotType.LEGS)
+			return (A) SquidArmorLeggings;
+
+		return (A) SquidArmorModel;
 	}
 
 	@Override
