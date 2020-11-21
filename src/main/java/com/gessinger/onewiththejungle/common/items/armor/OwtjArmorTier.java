@@ -38,7 +38,11 @@ public enum OwtjArmorTier implements IArmorMaterial
 
 	RABBIT_MATERIAL("rabbit_material", 80, new int[] {1, 2, 3, 1}, 10, 1, 0F, () -> {
 		return Ingredient.fromItems(OwtjItemRegistry.RABBIT_CHESTPLATE.get());
-	});
+	}),
+
+	PARROT_MATERIAL("rabbit_material", 80, new int[] {1, 2, 3, 1}, 10, 1, 0F, () -> {
+	return Ingredient.fromItems(OwtjItemRegistry.PARROT_CHESTPLATE.get());
+});
 
 	private final int durability;
 	private final int[] damageReduction;

@@ -21,6 +21,7 @@ public abstract class CustomArmorItem extends ArmorItem
 	private final Effect armorEffectType;
 	private final boolean isTickSlot;
 	private final Class<?> itemClass;
+
 	public CustomArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder)
 	{
 		super(materialIn, slot, builder);
@@ -43,14 +44,10 @@ public abstract class CustomArmorItem extends ArmorItem
 	@Override
 	public void onArmorTick (final ItemStack stack, final World world, final PlayerEntity player)
 	{
-		world.getProfiler().startSection(itemClass.toString());
-		if (!isTickSlot || !hasFullArmor(itemClass, player))
-		{
-			world.getProfiler().endSection();
-			return;
-		}
+		world.getProfiler().startSection(this.itemClass.toString());
+		if (this.isTickSlot && hasFullArmor(this.itemClass, player))
+			giveEffect(player);
 
-		giveEffect(player);
 		world.getProfiler().endSection();
 	}
 
@@ -58,7 +55,7 @@ public abstract class CustomArmorItem extends ArmorItem
 
 	abstract public Class<?> getItemClass();
 
-	private void giveEffect(final PlayerEntity player)
+	protected void giveEffect (final PlayerEntity player)
 	{
 		EffectInstance playerEff = player.getActivePotionEffect(this.armorEffectType);
 		if (playerEff == null)
@@ -70,7 +67,7 @@ public abstract class CustomArmorItem extends ArmorItem
 		}
 	}
 
-	private static boolean hasFullArmor (final Class<?> armorType, final PlayerEntity player)
+	protected boolean hasFullArmor (final Class<?> armorType, final PlayerEntity player)
 	{
 		Iterable<ItemStack> armorList = player.getArmorInventoryList();
 		for(ItemStack stack : armorList){

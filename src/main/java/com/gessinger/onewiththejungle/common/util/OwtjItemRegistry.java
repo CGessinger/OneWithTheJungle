@@ -5,6 +5,7 @@ import com.gessinger.onewiththejungle.common.items.armor.*;
 import com.gessinger.onewiththejungle.common.items.armor.chicken.ChickenArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.cow.CowArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.fish.FishArmorItem;
+import com.gessinger.onewiththejungle.common.items.armor.parrot.ParrotArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.pig.PigArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.rabbit.RabbitArmorItem;
 import com.gessinger.onewiththejungle.common.items.armor.sheep.SheepArmorItem;
@@ -112,4 +113,17 @@ public class OwtjItemRegistry
 
 	public static final RegistryObject<ArmorItem> RABBIT_BOOTS = ITEMS.register("rabbit_boots", () ->
 			new RabbitArmorItem(OwtjArmorTier.RABBIT_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
+
+	/* Parrot Armor */
+	public static final RegistryObject<ArmorItem> PARROT_HELMET = ITEMS.register("parrot_helmet", () ->
+			new ParrotArmorItem(OwtjArmorTier.PARROT_MATERIAL, EquipmentSlotType.HEAD, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PARROT_CHESTPLATE = ITEMS.register("parrot_chestplate", () ->
+			new ParrotArmorItem(OwtjArmorTier.PARROT_MATERIAL, EquipmentSlotType.CHEST, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PARROT_LEGGINGS = ITEMS.register("parrot_leggings", () ->
+			new ParrotArmorItem(OwtjArmorTier.PARROT_MATERIAL, EquipmentSlotType.LEGS, PROP_TAB));
+
+	public static final RegistryObject<ArmorItem> PARROT_BOOTS = ITEMS.register("parrot_boots", () ->
+			new ParrotArmorItem(OwtjArmorTier.PARROT_MATERIAL, EquipmentSlotType.FEET, PROP_TAB));
 }
