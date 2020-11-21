@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class OwtjItemRegistry
 {
-	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, OneWithTheJungle.MOD_ID);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OneWithTheJungle.MOD_ID);
 	private static final Item.Properties PROP_TAB = new Item.Properties().group(OneWithTheJungle.TAB);
 
 	// Armor Item
