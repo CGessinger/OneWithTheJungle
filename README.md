@@ -1,4 +1,4 @@
-# One With The Jungle for 1.15.2
+# One With The Jungle for 1.16.4
 One With The Jungle is a simple Minecraft mod adding mob armor which give different potion effects.
 This mod is definitly not made to provide a realistic minecraft, however it is interesting for making the early game more fun.
 
